@@ -10,6 +10,8 @@ class HomePage extends StatelessWidget {
           Column(
             children: [
               Center(
+                ///chalenge: make it with appBar
+                ///hint: use PreferredSize
                 child:Container(
                   margin: EdgeInsets.only(bottom: 10),
                   child: Text('nutripal',
@@ -23,6 +25,8 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Stack(
+                ///challenge make it with container only without stack
+                ///hint: use BoxDecoration
                 children: <Widget>[
                   Container(
                     width: MediaQuery.of(context).size.width,
@@ -95,7 +99,10 @@ class HomePage extends StatelessWidget {
                             child: Column(
                               children: <Widget>[
                                 Container(
-                                  child:Stack(
+                                  /// container malosh ae lazma sooo shelo ^^
+                                    child:Stack(
+                                      ///challenge part : make it with only container without Stack
+                                      ///hint: use BoxDecoration
                                     children: <Widget>[
                                       Image.asset(
                                         'assets/images/img2.jpg',
@@ -217,7 +224,10 @@ class HomePage extends StatelessWidget {
                             child: Column(
                               children: <Widget>[
                                 Container(
+                                  /// container malosh ae lazma
                                     child:Stack(
+                                      ///challenge part : make it with only container without Stack
+                                      ///hint: use BoxDecoration
                                       children: <Widget>[
                                         Image.asset(
                                           'assets/images/img4.jpg',
