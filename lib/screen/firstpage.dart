@@ -98,36 +98,34 @@ class HomePage extends StatelessWidget {
                             MediaQuery.of(context).size.height*0.35,
                             child: Column(
                               children: <Widget>[
+                                /// container malosh ae lazma sooo shelo ^^
+                                ///challenge part : make it with only container without Stack
+                                ///hint: use BoxDecoration
                                 Container(
-                                  /// container malosh ae lazma sooo shelo ^^
-                                    child:Stack(
-                                      ///challenge part : make it with only container without Stack
-                                      ///hint: use BoxDecoration
-                                    children: <Widget>[
-                                      Image.asset(
-                                        'assets/images/img2.jpg',
-                                        width: MediaQuery.of(context).orientation==Orientation.landscape?
-                                        MediaQuery.of(context).size.width*0.27:
-                                        MediaQuery.of(context).size.width*0.5,
-                                        height: MediaQuery.of(context).orientation==Orientation.landscape?
-                                        MediaQuery.of(context).size.height*0.3:
-                                        MediaQuery.of(context).size.height*0.18,
-                                        fit: BoxFit.fill,
+                                  width: MediaQuery.of(context).orientation==Orientation.landscape?
+                                  MediaQuery.of(context).size.width*0.27:
+                                  MediaQuery.of(context).size.width*0.5,
+                                  height: MediaQuery.of(context).orientation==Orientation.landscape?
+                                  MediaQuery.of(context).size.height*0.3:
+                                  MediaQuery.of(context).size.height*0.18,
+                                  decoration: BoxDecoration(
+                                        image: DecorationImage(image: AssetImage(
+                                          'assets/images/img2.jpg',
+                                        ))
                                       ),
-                                      Container(
-                                        alignment: Alignment.bottomRight,
-                                        height: MediaQuery.of(context).orientation==Orientation.landscape?
-                                        MediaQuery.of(context).size.height*0.3:
-                                        MediaQuery.of(context).size.height*0.17,
-                                        //child: Icons.check_circle_outline,
-                                        child: Icon(Icons.check_circle_outline,
-                                          color: Colors.white,
-                                          size: 40,
-                                        ),
+                                  child: Container(
+                                          margin: EdgeInsets.all(5),
+                                          alignment: Alignment.bottomRight,
+                                          height: MediaQuery.of(context).orientation==Orientation.landscape?
+                                          MediaQuery.of(context).size.height*0.3:
+                                          MediaQuery.of(context).size.height*0.17,
+                                          //child: Icons.check_circle_outline,
+                                          child: Icon(Icons.check_circle_outline,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
                                       ),
-                                    ],
-                                  )
-                                ),
+                                  ),
                                 Container(
                                   margin: EdgeInsets.only(left: 10,top: 10),
                                   width: MediaQuery.of(context).size.width,
