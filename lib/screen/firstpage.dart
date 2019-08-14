@@ -5,65 +5,56 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      ///chalenge: make it with appBar
+      ///hint: use PreferredSize
+      ///completed
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        bottom: PreferredSize(
+          child: Text('nutripal',
+            style: TextStyle(
+                fontSize: 40,
+                color: Colors.green[300],
+                fontFamily: 'Pacifico',
+                fontWeight: FontWeight.bold
+            ),
+          ),
+          preferredSize: const Size.fromHeight(20),
+        ),
+      ),
       body: ListView(
         children: <Widget>[
           Column(
             children: [
-              Center(
-                ///chalenge: make it with appBar
-                ///hint: use PreferredSize
-                child:Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Text('nutripal',
-                    style: TextStyle(
-                      fontSize: 40,
-                      color: Colors.green[300],
-                      fontFamily: 'Pacifico',
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-              ),
-              Stack(
-                ///challenge make it with container only without stack
-                ///hint: use BoxDecoration
-                children: <Widget>[
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).orientation==Orientation.landscape?
-                    MediaQuery.of(context).size.height*0.65:
-                    MediaQuery.of(context).size.height*0.4,
-                    child : Image.asset(
+              ///challenge make it with container only without stack
+              ///hint: use BoxDecoration
+              ///completed
+              Container(
+                margin: EdgeInsets.only(top: 10),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).orientation==Orientation.landscape?
+                MediaQuery.of(context).size.height*0.65:
+                MediaQuery.of(context).size.height*0.4,
+                decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage(
                       'assets/images/img1.jpg',
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height*0.4,
-                      fit: BoxFit.fill,
                     ),
-                  ),
-                  Container(
+                      fit: BoxFit.fill,)
+                ),
+                child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).orientation==Orientation.landscape?
                     MediaQuery.of(context).size.height*0.5:
                     MediaQuery.of(context).size.height*0.3,
+                    padding: EdgeInsets.all(20),
                     alignment: Alignment.bottomCenter,
-                    child: Text('WEEK 1',style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30
-                    ),),
-                  ),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).orientation==Orientation.landscape?
-                    MediaQuery.of(context).size.height*0.57:
-                    MediaQuery.of(context).size.height*0.34,
-                    alignment: Alignment.bottomCenter,
-                    child: Text('8 WEEK PLAN',style: TextStyle(
+                    child: Text('      WEEK 1 \n 8 WEEK PLAN',style: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25
-                    ),),
-                  ),
-                ],
+                        fontSize: 30,
+                    ),
+                    ),
+                ),
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -101,6 +92,7 @@ class HomePage extends StatelessWidget {
                                 /// container malosh ae lazma sooo shelo ^^
                                 ///challenge part : make it with only container without Stack
                                 ///hint: use BoxDecoration
+                                ///completed
                                 Container(
                                   width: MediaQuery.of(context).orientation==Orientation.landscape?
                                   MediaQuery.of(context).size.width*0.27:
@@ -111,10 +103,11 @@ class HomePage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                         image: DecorationImage(image: AssetImage(
                                           'assets/images/img2.jpg',
-                                        ))
+                                        ),
+                                          fit: BoxFit.fill,)
                                       ),
                                   child: Container(
-                                          margin: EdgeInsets.all(5),
+                                          padding: EdgeInsets.all(5),
                                           alignment: Alignment.bottomRight,
                                           height: MediaQuery.of(context).orientation==Orientation.landscape?
                                           MediaQuery.of(context).size.height*0.3:
@@ -221,35 +214,36 @@ class HomePage extends StatelessWidget {
                             MediaQuery.of(context).size.height*0.35,
                             child: Column(
                               children: <Widget>[
-                                Container(
                                   /// container malosh ae lazma
-                                    child:Stack(
-                                      ///challenge part : make it with only container without Stack
-                                      ///hint: use BoxDecoration
-                                      children: <Widget>[
-                                        Image.asset(
-                                          'assets/images/img4.jpg',
-                                          width: MediaQuery.of(context).orientation==Orientation.landscape?
-                                          MediaQuery.of(context).size.width*0.27:
-                                          MediaQuery.of(context).size.width*0.5,
-                                          height: MediaQuery.of(context).orientation==Orientation.landscape?
-                                          MediaQuery.of(context).size.height*0.3:
-                                          MediaQuery.of(context).size.height*0.18,
-                                          fit: BoxFit.fill,
-                                        ),
-                                        Container(
-                                          alignment: Alignment.bottomRight,
-                                          height: MediaQuery.of(context).orientation==Orientation.landscape?
-                                          MediaQuery.of(context).size.height*0.3:
-                                          MediaQuery.of(context).size.height*0.17,
-                                          //child: Icons.check_circle_outline,
-                                          child: Icon(Icons.check_circle_outline,
-                                            color: Colors.white,
-                                            size: 40,
-                                          ),
-                                        ),
-                                      ],
-                                    )
+                                  /// completed
+                                  ///challenge part : make it with only container without Stack
+                                  ///hint: use BoxDecoration
+                                  /// completed
+                                Container(
+                                  width: MediaQuery.of(context).orientation==Orientation.landscape?
+                                  MediaQuery.of(context).size.width*0.27:
+                                  MediaQuery.of(context).size.width*0.5,
+                                  height: MediaQuery.of(context).orientation==Orientation.landscape?
+                                  MediaQuery.of(context).size.height*0.3:
+                                  MediaQuery.of(context).size.height*0.18,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(image: AssetImage(
+                                        'assets/images/img4.jpg',
+                                      ),
+                                        fit: BoxFit.fill,)
+                                  ),
+                                  child: Container(
+                                    padding: EdgeInsets.all(5),
+                                    alignment: Alignment.bottomRight,
+                                    height: MediaQuery.of(context).orientation==Orientation.landscape?
+                                    MediaQuery.of(context).size.height*0.3:
+                                    MediaQuery.of(context).size.height*0.17,
+                                    //child: Icons.check_circle_outline,
+                                    child: Icon(Icons.check_circle_outline,
+                                      color: Colors.white,
+                                      size: 40,
+                                    ),
+                                  ),
                                 ),
                                 Container(
                                   margin: EdgeInsets.only(left: 10,top: 10),
